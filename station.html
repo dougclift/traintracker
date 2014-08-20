@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Doug Clift">
+    <title>iTrainTracker</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+    <style type="text/css">
+      #defaultCountdown { width: 300px; height: 60px; }
+    </style>
+    
+    <!-- Jquery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script>
+    $(function () {
+      var austDay = new Date();
+      austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+      $('#defaultCountdown').countdown({until: austDay, format: 'hMS'});
+    });	
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">iTrainTracker</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      
+       <div class="jumbotron">
+         <h1>Station Park</h1>
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <h4><span class="glyphicon glyphicon-time"></span> Train departs Northbound in :</h4>
+             <div id="defaultCountdown"></div>
+           </div>
+         </div>
+      </div><!-- /jumbotron header -->
+
+      <footer>
+        <p>Made for train lovers everywhere</p>
+      </footer>
+
+   
+    </div><!-- /.container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
